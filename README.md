@@ -1,2 +1,38 @@
-# trame-aoc
-Kitware provides Trame, an open-source oriented platform as a service, this is an implementation applied to the Advent of Code [2024]
+=========
+trame-aoc
+=========
+
+Advent of Code using Trame!
+
+
+* Free software: MIT License
+
+
+Installing
+----------
+Build and install the Vue components
+
+.. code-block:: console
+
+    cd vue-components
+    npm i
+    npm run build
+    cd -
+
+Install the application
+
+.. code-block:: console
+
+    pip install -e .
+
+
+Run the application
+
+.. code-block:: console
+
+    trame-aoc
+
+Features
+--------
+
+* TODO
