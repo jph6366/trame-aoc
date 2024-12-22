@@ -9,6 +9,16 @@ Advent of Code using Trame!
 
 Installing
 ----------
+Configure, Build, and Install Cpp Project
+.. code-block:: console
+
+    cd wasm-components/aoc-cpp
+    cmake -S . -B build
+    cmake --build build --target aoc-2024-web
+
+then move the generated  '*aoc-2024-wasm.js', 'aoc.js', and 'aoc-2024-wasm.wasm*'
+to trame_aoc/module/serve/wasm/ to reflect the configuration in wasm.py
+
 Build and install the Vue components
 
 .. code-block:: console
@@ -33,5 +43,3 @@ Run the application
 
 Features
 --------
-
-* TODO
