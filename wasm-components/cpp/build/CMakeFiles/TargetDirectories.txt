@@ -1,0 +1,3 @@
+/home/jphardee/Desktop/AdventOfCode/APP/trame-aoc/wasm-components/cpp/build/CMakeFiles/TRAME_ADVENT_OF_CODE.dir
+/home/jphardee/Desktop/AdventOfCode/APP/trame-aoc/wasm-components/cpp/build/CMakeFiles/edit_cache.dir
+/home/jphardee/Desktop/AdventOfCode/APP/trame-aoc/wasm-components/cpp/build/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,1 @@
+/usr/bin/em++ --js-library /home/jphardee/Desktop/AdventOfCode/APP/trame-aoc/wasm-components/aoc-cpp/build/cpp/applications/aoc-web/library.js -s EXPORTED_RUNTIME_METHODS=cwrap @CMakeFiles/aoc-2024-wasm.dir/objects1.rsp -o aoc-2024-wasm.js @CMakeFiles/aoc-2024-wasm.dir/linkLibs.rsp

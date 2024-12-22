@@ -1,0 +1,6 @@
+trame: # Default app under /index.html
+  www_modules:
+    - trame_aoc.module
+  app: trame-aoc
+trame-aoc: # /trame-aoc.html
+  app: trame-aoc

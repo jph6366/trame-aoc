@@ -1,0 +1,1 @@
+/usr/bin/em++ @CMakeFiles/AOC_Y2024_test_day01.dir/objects1.rsp -o AOC_Y2024_test_day01.js @CMakeFiles/AOC_Y2024_test_day01.dir/linkLibs.rsp

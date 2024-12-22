@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/jphardee/Desktop/AdventOfCode/APP/trame-aoc/wasm-components/aoc-cpp/build/_deps/compiletimeregularexpressions-subbuild/CMakeFiles/compiletimeregularexpressions-populate"
+		},
+		{
+			"file" : "/home/jphardee/Desktop/AdventOfCode/APP/trame-aoc/wasm-components/aoc-cpp/build/_deps/compiletimeregularexpressions-subbuild/CMakeFiles/compiletimeregularexpressions-populate.rule"
+		},
+		{
+			"file" : "/home/jphardee/Desktop/AdventOfCode/APP/trame-aoc/wasm-components/aoc-cpp/build/_deps/compiletimeregularexpressions-subbuild/CMakeFiles/compiletimeregularexpressions-populate-complete.rule"
+		},
+		{
+			"file" : "/home/jphardee/Desktop/AdventOfCode/APP/trame-aoc/wasm-components/aoc-cpp/build/_deps/compiletimeregularexpressions-subbuild/compiletimeregularexpressions-populate-prefix/src/compiletimeregularexpressions-populate-stamp/compiletimeregularexpressions-populate-build.rule"
+		},
+		{
+			"file" : "/home/jphardee/Desktop/AdventOfCode/APP/trame-aoc/wasm-components/aoc-cpp/build/_deps/compiletimeregularexpressions-subbuild/compiletimeregularexpressions-populate-prefix/src/compiletimeregularexpressions-populate-stamp/compiletimeregularexpressions-populate-configure.rule"
+		},
+		{
+			"file" : "/home/jphardee/Desktop/AdventOfCode/APP/trame-aoc/wasm-components/aoc-cpp/build/_deps/compiletimeregularexpressions-subbuild/compiletimeregularexpressions-populate-prefix/src/compiletimeregularexpressions-populate-stamp/compiletimeregularexpressions-populate-download.rule"
+		},
+		{
+			"file" : "/home/jphardee/Desktop/AdventOfCode/APP/trame-aoc/wasm-components/aoc-cpp/build/_deps/compiletimeregularexpressions-subbuild/compiletimeregularexpressions-populate-prefix/src/compiletimeregularexpressions-populate-stamp/compiletimeregularexpressions-populate-install.rule"
+		},
+		{
+			"file" : "/home/jphardee/Desktop/AdventOfCode/APP/trame-aoc/wasm-components/aoc-cpp/build/_deps/compiletimeregularexpressions-subbuild/compiletimeregularexpressions-populate-prefix/src/compiletimeregularexpressions-populate-stamp/compiletimeregularexpressions-populate-mkdir.rule"
+		},
+		{
+			"file" : "/home/jphardee/Desktop/AdventOfCode/APP/trame-aoc/wasm-components/aoc-cpp/build/_deps/compiletimeregularexpressions-subbuild/compiletimeregularexpressions-populate-prefix/src/compiletimeregularexpressions-populate-stamp/compiletimeregularexpressions-populate-patch.rule"
+		},
+		{
+			"file" : "/home/jphardee/Desktop/AdventOfCode/APP/trame-aoc/wasm-components/aoc-cpp/build/_deps/compiletimeregularexpressions-subbuild/compiletimeregularexpressions-populate-prefix/src/compiletimeregularexpressions-populate-stamp/compiletimeregularexpressions-populate-test.rule"
+		},
+		{
+			"file" : "/home/jphardee/Desktop/AdventOfCode/APP/trame-aoc/wasm-components/aoc-cpp/build/_deps/compiletimeregularexpressions-subbuild/compiletimeregularexpressions-populate-prefix/src/compiletimeregularexpressions-populate-stamp/compiletimeregularexpressions-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"compiletimeregularexpressions-populate"
+		],
+		"name" : "compiletimeregularexpressions-populate"
+	}
+}

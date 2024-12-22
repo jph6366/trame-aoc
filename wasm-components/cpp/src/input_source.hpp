@@ -1,0 +1,10 @@
+#ifndef TRAME_ADVENT_OF_CODE_INPUT_SOURCE_HPP
+#define TRAME_ADVENT_OF_CODE_INPUT_SOURCE_HPP
+
+#include <fstream>
+
+#if TEST_RUN
+    static std::ifstream cin(INPUT_SOURCE_FILE_NAME);
+#endif
+
+#endif //TRAME_ADVENT_OF_CODE_INPUT_SOURCE_HPP

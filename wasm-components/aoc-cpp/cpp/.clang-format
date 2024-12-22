@@ -1,0 +1,50 @@
+# Based on LLVM style with custom tweaks
+BasedOnStyle: LLVM
+
+# General formatting options
+IndentWidth: 4                    # Indentation size
+TabWidth: 4                       # Tab size if using tabs
+UseTab: Never                     # Use spaces instead of tabs
+
+# Brace styles
+BraceWrapping:
+  AfterClass: true                # Place opening brace on a new line for classes
+  AfterControlStatement: false    # Keep opening brace on the same line for if/while/for
+  AfterEnum: true                 # Place opening brace on a new line for enums
+  AfterFunction: true             # Place opening brace on a new line for functions
+  AfterNamespace: true            # Place opening brace on a new line for namespaces
+  AfterStruct: true               # Place opening brace on a new line for structs
+  SplitEmptyFunction: true        # Split empty functions into separate lines
+
+# Pointer and reference alignment
+PointerAlignment: Left            # Align pointers and references to the left (* or & next to type)
+
+# Column limits
+ColumnLimit: 100                  # Maximum line length
+
+# Spaces around operators
+SpacesInParentheses: false        # No spaces inside parentheses
+SpaceBeforeParens: ControlStatements  # Space before parentheses in control statements
+SpaceAfterTemplateKeyword: true   # Space after template keyword
+
+# Enums and lists
+AlignConsecutiveDeclarations: true  # Align variable declarations
+AllowShortEnumsOnASingleLine: true  # Allow short enums to be placed on a single line
+AllowShortFunctionsOnASingleLine: Inline  # Allow inline short functions to fit on one line
+
+# Identifier styles
+DerivePointerAlignment: false     # Disable automatic alignment inference
+AlignEscapedNewlines: Left        # Align escaped newlines to the left
+
+# Includes and imports
+IncludeBlocks: Preserve           # Maintain user-defined include grouping
+SortIncludes: false               # Don't automatically reorder include statements
+
+# Function definitions
+AllowShortFunctionsOnASingleLine: None  # Prevent functions from being squeezed onto one line
+
+# Comments
+CommentPragmas: '^IWYU'          # Ignore specific comments (e.g., IWYU comments)
+BreakBeforeBraces: Allman         # Allman style brace breaking
+...
+

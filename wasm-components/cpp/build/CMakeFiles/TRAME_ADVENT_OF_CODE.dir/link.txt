@@ -1,0 +1,1 @@
+/usr/bin/em++  -pthread -std=c++23 -static-libstdc++ -O3 -O3 -DNDEBUG @CMakeFiles/TRAME_ADVENT_OF_CODE.dir/objects1.rsp -o TRAME_ADVENT_OF_CODE.js
