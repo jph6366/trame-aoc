@@ -17,9 +17,10 @@ Configure, Build, and Install Cpp Project
     cmake -S . -B build
     cmake --build build --target aoc-2024-web
 
-then move the generated  '*aoc-2024-wasm.js', 'aoc.js', and 'aoc-2024-wasm.wasm*'
-to trame_aoc/module/serve/wasm/ to reflect the configuration in wasm.py
-Cpp setup portion mirrored from https://github.com/PascalGuenther/AdventOfCode2024/
+then move the generated  '*aoc-2024-wasm.mjs', and 'aoc-2024-wasm.wasm*'
+to trame_aoc/module/serve/wasm/ to reflect the registered modules using wasm.py
+C++23 project for advent of code mirrored from https://github.com/PascalGuenther/AdventOfCode2024/
+And the aoc-2024-wasm executable command mirror Kitware's (vtkWasmSceneManager)[!https://gitlab.kitware.com/vtk/vtk/-/tree/master/Web/WebAssembly]
 
 
 Build and install the Vue components
