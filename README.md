@@ -15,7 +15,7 @@ Configure, Build, and Install Cpp Project
 
     cd wasm-components/aoc-cpp
     cmake -S . -B build
-    cmake --build build --target aoc-2024-web
+    cmake --build build --target aoc-2024-wasm
 
 then move the generated  '*aoc-2024-wasm.mjs', and 'aoc-2024-wasm.wasm*'
 to trame_aoc/module/serve/wasm/ to reflect the registered modules using wasm.py
