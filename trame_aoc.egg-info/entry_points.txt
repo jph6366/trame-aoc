@@ -1,6 +1,0 @@
-[console_scripts]
-trame-aoc = trame_aoc.app:main
-
-[jupyter_serverproxy_servers]
-trame-aoc = trame_aoc.app.jupyter:jupyter_proxy_info
-

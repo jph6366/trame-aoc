@@ -1,3 +1,0 @@
-trame
-trame-vuetify
-trame-vtk
