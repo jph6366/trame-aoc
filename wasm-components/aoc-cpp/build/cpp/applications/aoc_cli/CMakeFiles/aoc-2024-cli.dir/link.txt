@@ -1,1 +1,0 @@
-/usr/bin/em++ @CMakeFiles/aoc-2024-cli.dir/objects1.rsp -o aoc-2024-cli.js @CMakeFiles/aoc-2024-cli.dir/linkLibs.rsp

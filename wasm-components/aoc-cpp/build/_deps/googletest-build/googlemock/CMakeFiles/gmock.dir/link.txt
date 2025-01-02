@@ -1,2 +1,0 @@
-emar qc ../../../lib/libgmock.a "CMakeFiles/gmock.dir/src/gmock-all.cc.o"
-emranlib ../../../lib/libgmock.a

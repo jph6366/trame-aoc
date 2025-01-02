@@ -21,9 +21,6 @@ class CustomWidget(HtmlElement):
             "your-custom-widget",
             **kwargs,
         )
-        self._attr_names += [
-            "days"
-        ]
         self._event_names += [
             "change",
         ]

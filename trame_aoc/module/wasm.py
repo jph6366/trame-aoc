@@ -7,5 +7,5 @@ def register_wasm(serve_path):
 
     return dict(
         # module_scripts=[f"{BASE_URL}/vtkWasmSceneManager.mjs"],
-        state={"__trame_aoc_wasm": BASE_DIR},
+        state={"__trame_aoc_wasm": BASE_DIR },
     )
