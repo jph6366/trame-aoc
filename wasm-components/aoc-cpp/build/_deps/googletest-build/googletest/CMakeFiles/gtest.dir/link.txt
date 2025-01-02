@@ -1,2 +1,0 @@
-emar qc ../../../lib/libgtest.a "CMakeFiles/gtest.dir/src/gtest-all.cc.o"
-emranlib ../../../lib/libgtest.a

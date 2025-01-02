@@ -1,2 +1,0 @@
-emar qc ../../../lib/libgtest_main.a CMakeFiles/gtest_main.dir/src/gtest_main.cc.o
-emranlib ../../../lib/libgtest_main.a

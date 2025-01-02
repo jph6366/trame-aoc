@@ -4,7 +4,7 @@ from trame.decorators import TrameApp, change, controller
 from trame.ui.vuetify3 import SinglePageLayout
 from trame.widgets import vuetify3, html
 from trame_aoc.widgets import trame_aoc as my_widgets
-from trame_aoc.app import js_solutions
+from trame_aoc.app import js_solutions, wasm_solutions
 from trame_aoc.app.solutions.main_runner import main
 
 # ---------------------------------------------------------
@@ -122,6 +122,26 @@ def part2(puzzle_input):
             "       |        |        |        |    |        |  ",
 
 
+        ]
+        self.state.advent_completed = [
+            "          .-----.          .------------------.    ",
+            "       .--'~ ~ ~|        .-' *       \  /     '-.  ",
+            "    .--'~  .* ~ |        |  >o<   \_\_\|_/__/   |  ",
+            ".---': ~ '(~), ~|        | >@>O< o-_/.()__------|  ",
+            "|               |        |                      |  ",
+            "|               |        |          ..          |  ",
+            "|               |        |        .'  '.        |  ",
+            "|               |        |        |    |        |  ",
+            "|   .--.        |        |        |    |        |  ",
+            "'---'  |        |        |        |    |        |  ",
+            "       |        |        |        |    |        |  ",
+            "       |        |        |        |    |        |  ",
+            "       |        |        |        |    |        |  ",
+            "       |        |        |        |    |        |  ",
+            "       |        |        |        |    |        |  ",
+            "       |        |        |        |    |        |  ",
+            "       |        |        |        |    |        |  ",
+            "       |        |        |        |    |        |  ",
         ]
         self.state.problems = [
             {
@@ -264,6 +284,9 @@ def part2(puzzle_input):
         elif (self.state.active_lang == 2):
             js_solutions.SolutionsComponent(self.server).init_solution()
             js_solutions.SolutionsComponent(self.server).get_ui()
+        elif (self.state.active_lang == 1):
+            wasm_solutions.WasmSolutionsComponent(self.server).init_solution()
+            wasm_solutions.WasmSolutionsComponent(self.server).get_ui()
     
     @controller.set("widget_change")
     def widget_change(self):
@@ -297,7 +320,7 @@ def part2(puzzle_input):
                                     with vuetify3.VCard(style="background-color:#0e0f23; color: #fff; height:100%;"):
                                         for idx in range(len(self.state.advent)):
                                             if idx == problem['day']:
-                                                html.Pre(self.state.advent[problem['day']], style="text-align:center;")
+                                                html.Pre(self.state.advent_completed[problem['day']], style="text-align:center;")
                                             else:
                                                 html.Pre(self.state.advent[idx], style="color: black; text-align:center;")
                                         with html.A(href=f"https://adventofcode.com/2024/day/{problem['day']}"):
@@ -352,8 +375,7 @@ def part2(puzzle_input):
                                     html.Pre('\n')
                                     html.Pre(v_show=("active_lang==0"),v_text=("solution_text"))
                                     html.Pre('\n',v_show=("active_lang==0"))
-                                    # my_widgets.CustomWidget(v_show=("active_lang==1"),
-                                    #                         days=[], change=self.widget_change)
+                                    wasm_solutions.WasmSolutionsComponent(self.server).get_ui()
                                     js_solutions.SolutionsComponent(self.server).get_ui()
 
                     with vuetify3.VContainer(v_model=("show_chip", 0), v_show=("active_tab==1"), style="font-family:Georgia, serif;width:auto;background-color:#008000; padding: 10px; border-radius: 8px;"):

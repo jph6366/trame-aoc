@@ -1,2 +1,0 @@
-emar qc libaoc_y2024_core.a CMakeFiles/aoc_y2024_core.dir/src/puzzle_factory.cpp.o CMakeFiles/aoc_y2024_core.dir/src/day01.cpp.o CMakeFiles/aoc_y2024_core.dir/src/day02.cpp.o CMakeFiles/aoc_y2024_core.dir/src/day03.cpp.o
-emranlib libaoc_y2024_core.a

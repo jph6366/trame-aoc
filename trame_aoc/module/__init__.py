@@ -1,6 +1,5 @@
 from pathlib import Path
 
-from trame_aoc.module.media import register_media
 from trame_aoc.module.wasm import register_wasm
 
 # Compute local path to serve
@@ -28,4 +27,4 @@ vue_use = ["trame_aoc"]
 def setup(app, **kwargs):
     """Method called at initialization with possibly some custom keyword arguments"""
     app.enable_module(register_wasm(serve_path))
-    app.enable_module(register_media(serve_path))
+

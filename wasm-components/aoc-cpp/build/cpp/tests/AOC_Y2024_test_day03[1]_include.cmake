@@ -1,5 +1,0 @@
-if(EXISTS "/home/jphardee/Desktop/AdventOfCode/APP/trame-aoc/wasm-components/aoc-cpp/build/cpp/tests/AOC_Y2024_test_day03[1]_tests.cmake")
-  include("/home/jphardee/Desktop/AdventOfCode/APP/trame-aoc/wasm-components/aoc-cpp/build/cpp/tests/AOC_Y2024_test_day03[1]_tests.cmake")
-else()
-  add_test(AOC_Y2024_test_day03_NOT_BUILT AOC_Y2024_test_day03_NOT_BUILT)
-endif()
