@@ -2,7 +2,12 @@ trame-aoc
 =========
 
 Advent of Code using Trame!
+
 Trame offers the ability to write pythonic front end code and allows for easy to use customization (through available widgets and out of box libraries) and the innate ability to work seamlessly locally and across the web.
+
+Originally inspired by https://github.com/mgtezak/Advent-of-Code-Puzzle-Solver
+Their use of streamlit ( another Python framework to build interactive web apps )
+motivated my initialization of my own version to begin my Trame development experience.
 
 * Free software: MIT License
 
