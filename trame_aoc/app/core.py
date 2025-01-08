@@ -283,10 +283,10 @@ def part2(puzzle_input):
                 self.state.solution_text = text_solution
         elif (self.state.active_lang == 2):
             js_solutions.SolutionsComponent(self.server).init_solution()
-            js_solutions.SolutionsComponent(self.server).get_ui()
+            # js_solutions.SolutionsComponent(self.server).get_ui()
         elif (self.state.active_lang == 1):
             wasm_solutions.WasmSolutionsComponent(self.server).init_solution()
-            wasm_solutions.WasmSolutionsComponent(self.server).get_ui()
+            # wasm_solutions.WasmSolutionsComponent(self.server).get_ui()
     
     @controller.set("widget_change")
     def widget_change(self):

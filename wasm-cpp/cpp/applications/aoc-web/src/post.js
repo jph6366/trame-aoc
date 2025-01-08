@@ -1,2 +1,2 @@
-globalThis.AOC2024Wasm = aoc_2024_wasm;
+globalThis.AOC2024Wasm = aoc2024wasm;
 

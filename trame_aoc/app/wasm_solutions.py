@@ -2,6 +2,7 @@ from trame.app import get_server
 from trame_aoc.widgets import trame_aoc
 from trame.widgets import html, client
 from trame.decorators import change, controller
+import asyncio
 
 class WasmSolutionsComponent:
     def __init__(self, server):
@@ -22,10 +23,11 @@ class WasmSolutionsComponent:
 
     
     def init_solution(self):
-         self.server.js_call("wasm-solution", "init")
+        self.server.js_call("wasm-solution", "init")
 
     
     @controller.set("get_ui")
     def get_ui(self):
+            self.init_solution()
             return trame_aoc.CustomWidget(v_show=("active_lang==1"),
                                         change=self.widget_change)

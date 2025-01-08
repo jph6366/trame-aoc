@@ -16,7 +16,8 @@ list(APPEND emscripten_link_options
   "-sALLOW_TABLE_GROWTH=1"
   "-sEXPORT_NAME=aoc2024wasm"
   "-sENVIRONMENT=node,web"
-  "-sEXPORTED_FUNCTIONS=[ _main]"
+  "-sMODULARIZE=1"
+  "-sEXPORT_ES6=1"
   )
 
 
@@ -31,11 +32,6 @@ endif ()
 
 # Create executable
 add_executable(aoc-2024-wasm ${SOURCES})
-
-
-#   # Add your custom module
-# add_library(aoc-2024-wasm STATIC
-# ${source_files})
 
 target_compile_features(aoc-2024-wasm PUBLIC
     cxx_std_23
@@ -64,7 +60,3 @@ set_target_properties(aoc-2024-wasm
 install(FILES
     "$<TARGET_FILE_DIR:aoc-2024-wasm>/aoc-2024-wasm.wasm"
     DESTINATION ${CMAKE_INSTALL_BINDIR})
-  
-# target_sources(aoc-2024-wasm PRIVATE
-#     ${CMAKE_CURRENT_SOURCE_DIR/aoc-web.cpp}
-# )

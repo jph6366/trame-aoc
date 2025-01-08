@@ -30,12 +30,41 @@ export default {
 
       trame.state.watch(["active_car"], async (idx) => {
         await window.AOC2024Wasm().then((Module) => {
-          const wasmCallbacks = new Module.WasmCallbacks();
           const day = idx + 1;
-          const result = wasmCallbacks.hasImplementationForDay(day);
-          console.log(`Day ${day} has implementation:`, result);
+          const result = Module.hasImplementationForDay(day);
+          if (result) {
+            document.querySelector(
+              "#wasm-solution"
+            ).innerHTML = `Day ${day} has implementation`;
+          } else {
+            document.querySelector(
+              "#wasm-solution"
+            ).innerHTML = `Day ${day} not implemented yet`;
+          }
         });
       });
+
+      trame.refs["wasm-solution"] = {
+        async init() {
+          if (trame.state.get("puzzle_input")) {
+            const reader = new FileReader();
+
+            reader.onload = async function (event) {
+              const fileContent = event.target.result;
+              await window.AOC2024Wasm().then((Module) => {
+                const day = trame.state.get("active_car") + 1;
+                const result = Module.solvePuzzle(day, fileContent);
+                document.querySelector("#wasm-solution").innerHTML = result;
+              });
+            };
+            reader.readAsText(trame.state.get("puzzle_input"));
+          } else {
+            document.querySelector("#wasm-solution").innerHTML = `
+            <p>\nyou forgot the file input ya cotton-headed ninny muggin!\n</p>
+          `;
+          }
+        },
+      };
     });
   },
   template: `

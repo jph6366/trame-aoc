@@ -11,9 +11,8 @@ export function setupSolution(trame) {
       const fileContent = event.target.result;
 
       // Now you can update the innerHTML once the file is read
-      const { part1, part2 } = sp.getSolutionByDay(
-        trame.state.get("active_car")
-      );
+      const active_car = trame.state.get("active_car") + 1;
+      const { part1, part2 } = sp.getSolutionByDay(active_car);
       document.querySelector("#solution").innerHTML = `
           <p>Part 1:</p>
           <pre>${part1(fileContent)}</pre>

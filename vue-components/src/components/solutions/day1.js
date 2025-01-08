@@ -16,8 +16,10 @@ export class LocationComputer {
     // Insert notes into heaps based on input
     input.split("\n").forEach((line) => {
       const numbers = line.split(" ").map(Number);
-      this.selectionHeaps[0].insert(numbers[0]);
-      this.selectionHeaps[1].insert(numbers[1]);
+      if (numbers.length != 1) {
+        this.selectionHeaps[0].insert(numbers[0]);
+        this.selectionHeaps[1].insert(numbers[3]);
+      }
     });
   }
 
@@ -25,14 +27,16 @@ export class LocationComputer {
     // Insert data into Count-Min Sketch matrix
     input.split("\n").forEach((line) => {
       const numbers = line.split(" ").map(Number);
-      this.hashFunctions.forEach((hashFunc, i) => {
-        const hashVal = parseInt(
-          hashFunc(String(numbers[1])).toString(CryptoJS.enc.Hex),
-          16
-        );
-        const bucketIdx = hashVal % this.cols;
-        this.countMatrix[i][bucketIdx] += 1;
-      });
+      if (numbers.length != 1) {
+        this.hashFunctions.forEach((hashFunc, i) => {
+          const hashVal = parseInt(
+            hashFunc(String(numbers[3])).toString(CryptoJS.enc.Hex),
+            16
+          );
+          const bucketIdx = hashVal % this.cols;
+          this.countMatrix[i][bucketIdx] += 1;
+        });
+      }
     });
     return this;
   }
@@ -52,18 +56,14 @@ export class LocationComputer {
   }
 
   computeMinPairDist() {
-    // Compute the minimum pair distance from the heaps
-    if (this.selectionHeaps[0].isEmpty() || this.selectionHeaps[1].isEmpty()) {
-      throw new Error("Heaps are empty; cannot compute distance.");
-    }
     const aNum = this.selectionHeaps[0].extractRoot();
     const bNum = this.selectionHeaps[1].extractRoot();
+
     return Math.abs(aNum - bNum);
   }
 
   findTotalDistances() {
     // Find the total distance by processing all pairs in the heaps
-    this.total = 0;
     while (!this.selectionHeaps[0].isEmpty()) {
       this.total += this.computeMinPairDist();
     }
@@ -86,7 +86,7 @@ export function main() {
   const part1 = (input) => {
     const lc = new LocationComputer(3, 4500);
     lc.insertNotes(input);
-    lc.findTotalDistances();
+    return lc.findTotalDistances();
   };
 
   const part2 = (input) =>
