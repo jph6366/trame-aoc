@@ -3,7 +3,7 @@ from trame_aoc.widgets import trame_aoc
 from trame.widgets import html, client
 from trame.decorators import change, controller
 
-class SolutionsComponent:
+class JsSolutionsComponent:
     def __init__(self, server):
         self.server = get_server(server, client_type="vue3")
 

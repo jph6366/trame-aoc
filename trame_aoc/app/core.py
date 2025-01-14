@@ -4,9 +4,7 @@ from trame.decorators import TrameApp, change, controller
 from trame.ui.vuetify3 import SinglePageLayout
 from trame.widgets import vuetify3, html
 from trame_aoc.widgets import trame_aoc as my_widgets
-from trame_aoc.app import js_solutions, wasm_solutions
-from trame_aoc.app.solutions.main_runner import main
-
+from trame_aoc.app import js_solutions, wasm_solutions, solutions
 # ---------------------------------------------------------
 # Engine class
 # ---------------------------------------------------------
@@ -266,6 +264,12 @@ def part2(puzzle_input):
     def set_lang2(self):
         if(self.state.show_lang and self.state.show_lang != 1 and self.state.show_lang != 0): self.state.show_lang = 0
         else: self.state.show_lang = 2
+
+    def init_solution(self, day, input):
+        sp = solutions.SolutionProvider()
+        f,g =sp.getSolutionByDay(day+1, input)
+        return f"What is the total distance between your lists? \n {f} \n What is their similarity score? \n {g}"
+
  
     @controller.set("compute_solution")
     def compute_solution(self):
@@ -278,20 +282,13 @@ def part2(puzzle_input):
                 self.state.solution_text = 'you forgot the file input ya cotton-headed ninny muggin!'
             else:
                 self.state.solution_text = 'solution otw'
-                text_solution = main(self.state.puzzle_input, self.state.active_car+1)
-                # Update the state with the computed solution
-                self.state.solution_text = text_solution
+                self.state.solution_text = self.init_solution(self.state.active_car, self.state.puzzle_input)
         elif (self.state.active_lang == 2):
-            js_solutions.SolutionsComponent(self.server).init_solution()
+            js_solutions.JsSolutionsComponent(self.server).init_solution()
             # js_solutions.SolutionsComponent(self.server).get_ui()
         elif (self.state.active_lang == 1):
             wasm_solutions.WasmSolutionsComponent(self.server).init_solution()
             # wasm_solutions.WasmSolutionsComponent(self.server).get_ui()
-    
-    @controller.set("widget_change")
-    def widget_change(self):
-        print(">>> WASM ENGINE(a): Widget Change")
-
 
 
     def _build_ui(self, *args, **kwargs):
@@ -376,7 +373,7 @@ def part2(puzzle_input):
                                     html.Pre(v_show=("active_lang==0"),v_text=("solution_text"))
                                     html.Pre('\n',v_show=("active_lang==0"))
                                     wasm_solutions.WasmSolutionsComponent(self.server).get_ui()
-                                    js_solutions.SolutionsComponent(self.server).get_ui()
+                                    js_solutions.JsSolutionsComponent(self.server).get_ui()
 
                     with vuetify3.VContainer(v_model=("show_chip", 0), v_show=("active_tab==1"), style="font-family:Georgia, serif;width:auto;background-color:#008000; padding: 10px; border-radius: 8px;"):
                         vuetify3.VChip("Part 1", draggable=True, click=self.set_code1,  style="background-color: #a22334; color: white; font-size: 1em;")
