@@ -53,5 +53,11 @@ Run the application
 
     trame-aoc
 
-Features
+TODO
 --------
+
+- [x] Azure Web App Container
+- [ ] Fill out all solutions (1-25)
+- [ ] Refactor Code Showcase to use [trame-code]( https://github.com/Kitware/trame-code)
+- [ ] Support more languages to solve puzzles in (R,TypeScript, C, Rust, etc.)
+- [ ] Add trame-vtk(or vtkLocal) for rendering and observing problem and generated/inputted solution simultaneously
