@@ -4,7 +4,7 @@ trame-aoc
 Advent of Code using Trame!
 
 [DEMO](https://trame-aoc-czdyaferdehpcfd7.canadacentral-01.azurewebsites.net/index.html)
-MAY TAKE A FEW MINUTES TO LOAD
+MAY TAKE A MOMENT TO LOAD
 
 Trame offers the ability to write pythonic front end code and allows for easy to use customization (through available widgets and out of box libraries) and the innate ability to work seamlessly locally and across the web.
 
