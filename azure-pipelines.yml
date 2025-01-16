@@ -10,7 +10,7 @@ resources:
 
 variables:
   # Container registry service connection established during pipeline creation
-  dockerRegistryServiceConnection: '2b7e14ea-c645-4c72-9f06-e8d1888ff3bd'
+  dockerRegistryServiceConnection: ''
   imageRepository: 'trameaoc'
   containerRegistry: 'hardeeregistry.azurecr.io'
   dockerfilePath: '$(Build.SourcesDirectory)/bundles/docker/Dockerfile'
